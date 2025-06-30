@@ -113,7 +113,7 @@ public class Service {
     public void printAll() {
         System.out.println("=== ROOMS ===");
         rooms.stream()
-                .sorted(Comparator.comparing(Room::getRoomNumber))
+                .sorted(Comparator.comparing(Room::getCreatedAt).reversed())
                 .forEach(System.out::println);
         
         System.out.println("\n=== BOOKINGS ===");
@@ -136,7 +136,7 @@ public class Service {
     public void printAllUsers() {
         System.out.println("=== USERS ===");
         users.stream()
-                .sorted(Comparator.comparing(User::getUserId))
+                .sorted(Comparator.comparing(User::getCreatedAt).reversed())
                 .forEach(user -> {
                     System.out.println("User ID: " + user.getUserId() + ", Balance: " + user.getBalance());
                 });

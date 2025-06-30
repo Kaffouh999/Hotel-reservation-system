@@ -45,6 +45,7 @@ public class Main {
             System.out.println("Booking failed: " + e.getMessage());
         }
         
+        // Final test case
         service.setRoom(1, RoomType.MASTER_SUITE, 10000);
         
         System.out.println("=== PRINT ALL ===");
